@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jack Hartmann</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/mainbody.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-section">
+        <div class="name-link">
+          <a href="./index.html">
+            <div class="my-name">Jack J. Hartmann</div>
+          </a>
+        </div>
+
+        <div class="links-icon-container">
+          <button class="links-button">        
+            <img class="links-icon" 
+            src="icons/links-icon.webp">
+            <div class="tooltip"> 
+              <div class="twitter">Twitter: &#64; jackhartmann</div>
+            </div>
+          </button>
+        </div>
+
+      </div>
+      
+      <div class="middle-section">
+        <div class="direct">
+          Direct
+        </div>
+        <button class="phone-number-button">
+          <img class="phone-number-icon" src="icons/phone-number-icon.jpg">
+          <div class="tooltip">(651)-274-2830</div>
+        </button>
+        <button class="email-address-button">
+          <img class="email-address-icon" src="icons/email-address-icon.png">
+          <div class="tooltip">jackhartmann1997@gmail.com</div>
+        </button>
+      </div>
+
+      <div class="right-section">
+        <div class="Credentials">
+          Ideas
+        </div>
+      </div>
+    
+    </div>
+
+
+    <div class="sidebar">
+      <div class="sidebar-link">
+        <img src="icons/art-icon.jpg">
+        <a href="./art.html">
+          <div>Art</div>
+        </a>
+      </div>
+      <div class="sidebar-link">
+        <img src="icons/bets-icon.png">
+        <a href="./bets.html">
+          <div>Bets</div>
+        </a>
+      </div>
+      <div class="sidebar-link">
+        <img src="icons/white-ideas.png">
+        <a href="./ideas.html">
+          <div>Ideas</div>
+        </a>
+      </div>
+      <div class="sidebar-link">
+        <img src="icons/memories.png">
+        <a href="./memorables.html">
+          <div>Memorables</div>
+        </a>
+      </div>
+      <div class="sidebar-link">
+        <img src="icons/passion-icon.png">
+        <a href="./passions.html">
+          <div>Interests</div>
+        </a>
+      </div>
+      <div class="sidebar-link">
+        <img src="icons/candles-icon.png">
+        <a href="./tradingideas.html">
+          <div>Trading Ideas</div>
+        </a>
+      </div>
+
+    </div>
+   
+    <div class="ideas-list" >
+      <div class="idea-1-info">
+        <b>chess variant</b> with purpose of minimizing memorized openings while maintaining as close to standard chess as possible. Only moves one and three differ than that of the standard game as follows: 
+      </div>
+
+      <div class="idea-1-description"> 
+        Black chooses White's first move; White chooses Black's first move. Move 2 is standard chess. For Move 3, the same procedure is followed as that of Move 1. Note that the board arrangement and all else remains the same. After Move 3, the game returns to standard chess for the remainder of the match. Perhaps only altering Move 1 would be sufficient. 
+      </div>
+    <div class="idea-1-description-cont"> Game code that will look better on site soon:  class ChessVariant:
+      def __init__(self):
+          self.board = [
+              ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'],
+              ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+              ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
+              ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'],
+          ]
+          self.current_player = 'white'
+          self.move_count = 1
+  
+      def print_board(self):
+          for row in self.board:
+              print(row)
+  
+      def get_possible_moves(self, player):
+          # standard chess rules to get possible moves
+          pass
+  
+      def make_move(self, move):
+          # standard chess move logic
+          pass
+  
+      def play_game(self):
+          while True:
+              self.print_board()
+  
+              if self.move_count == 1 or self.move_count == 3:
+                  if self.current_player == 'white':
+                      move = input("Black, choose White's move: ")
+                      self.make_move(move)
+                      self.current_player = 'black'
+                  else:
+                      move = input("White, choose Black's move: ")
+                      self.make_move(move)
+                      self.current_player = 'white'
+              else:
+                  possible_moves = self.get_possible_moves(self.current_player)
+                  move = input(f"{self.current_player.capitalize()}, make your move: ")
+  
+                  while move not in possible_moves:
+                      move = input("Invalid move. Please try again: ")
+  
+                  self.make_move(move)
+  
+                  if self.current_player == 'white':
+                      self.current_player = 'black'
+                  else:
+                      self.current_player = 'white'
+  
+              self.move_count += 1
+  </div>
+
+ 
+  
+  </div>
+
+    
+  
+
+    </div>
+
+    <div class="ideas-list" >
+      <div class="idea-2-info">
+        the company that exploits <b> space mining</b> first should have been supported by public, perhaps international funds, to implement an <b> asteroid defense</b> system. It seems that whomever will be able to mine asteroids at scale will also have the ability to defend Earth from them. That system could include collections of booster rockets attached to two stations in Earth's orbit ready if ever signaled to venture out and alter course. The cost of such an operation will reduce perhaps greatly as payload costs to space decrease.  </div>
+      
+        <div class="idea-2-description">
+
+    </div>
+    </div>
+    
+
+  </body>
+</html>
